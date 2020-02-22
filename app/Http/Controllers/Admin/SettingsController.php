@@ -41,7 +41,7 @@ class SettingsController extends Controller
         $profile = Image::make($image)->resize(500,500)->stream();
         Storage::disk('public')->put('profile/'.$imageName, $profile);
     }else{
-        $imageName = $user->image; 
+        $imageName = $user->image;
     }
     $user->name = $request->name;
     $user->email = $request->email;
